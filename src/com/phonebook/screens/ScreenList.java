@@ -49,7 +49,6 @@ public class ScreenList extends Screen {
         PhoneBook phoneBook = PhoneBook.getInstance();
         System.out.flush();
         System.out.println("Phoneboook 1.0v");
-        System.out.println(currentPage);
 
         List<Person> persons = Utils.getPage(phoneBook.getPersons(),currentPage + 1, PAGINATION);
 

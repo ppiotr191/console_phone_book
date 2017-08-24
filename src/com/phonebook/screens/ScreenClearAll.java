@@ -3,9 +3,6 @@ package com.phonebook.screens;
 import com.phonebook.options.ChangeScreen;
 import com.phonebook.options.ClearAll;
 
-/**
- * Created by asus on 24.08.2017.
- */
 public class ScreenClearAll  extends Screen {
 
     public ScreenClearAll() {
