@@ -21,6 +21,7 @@ public class ScreenList extends Screen {
         options.put(Key.P.getKeyCode(), new Previous(this));
         options.put(Key.E.getKeyCode(), new ChangeScreen(ScreenType.SCREEN_EXIT));
         options.put(Key.A.getKeyCode(), new ChangeScreen(ScreenType.SCREEN_ADD_RECORD));
+        options.put(Key.S.getKeyCode(), new ChangeScreen(ScreenType.SCREEN_SHOW));
         options.put(Key.C.getKeyCode(), new ChangeScreen(ScreenType.SCREEN_CLEAR_ALL));
         options.put(Key.D.getKeyCode(), new ChangeScreen(ScreenType.SCREEN_DELETE));
     }
@@ -42,14 +43,14 @@ public class ScreenList extends Screen {
             paginateOption += "[N]ext  ";
         }
 
-        System.out.println( paginateOption + "[A]dd record  [D]elete  [C]lear all  [E]xit" );
+        System.out.println( paginateOption + "[A]dd record  [S]how  [D]elete  [C]lear all  [E]xit" );
     }
 
     @Override
     public void proceed() {
         PhoneBook phoneBook = PhoneBook.getInstance();
         System.out.flush();
-        System.out.println("Phoneboook 1.0v");
+        System.out.println("Phoneboook 1.1v");
 
         List<Person> persons = Utils.getPage(phoneBook.getPersons(),currentPage + 1, PAGINATION);
 

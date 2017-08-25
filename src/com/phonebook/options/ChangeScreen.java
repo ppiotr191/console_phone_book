@@ -30,6 +30,9 @@ public class ChangeScreen extends ScreenOption {
             case SCREEN_DELETE:
                 destScreen = new ScreenDelete();
                 break;
+            case SCREEN_SHOW:
+                destScreen = new ScreenShow();
+                break;
         }
         destScreen.proceed();
     }
