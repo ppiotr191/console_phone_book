@@ -1,7 +1,7 @@
-Phonebook in console.
+# Phonebook in console, written in Java
 
-Feathers:
-    - Pagination
-    - Create and delete operations
-    - Saving to *.csv file
+Feathers:<br/>
+    - Pagination<br/>
+    - Create and delete operations<br/>
+    - Saving to *.csv file<br/>
 
