@@ -2,6 +2,7 @@ package com.phonebook.screens;
 
 import com.phonebook.Person;
 import com.phonebook.PhoneBook;
+import com.phonebook.utils.Key;
 import com.phonebook.utils.Utils;
 import com.phonebook.options.ChangeScreen;
 import com.phonebook.options.Next;
@@ -16,12 +17,12 @@ public class ScreenList extends Screen {
 
     public ScreenList() {
         currentPage = 0;
-        options.put(110, new Next(this));
-        options.put(112, new Previous(this));
-        options.put(101, new ChangeScreen(ScreenType.SCREEN_EXIT));
-        options.put(97, new ChangeScreen(ScreenType.SCREEN_ADD_RECORD));
-        options.put(99, new ChangeScreen(ScreenType.SCREEN_CLEAR_ALL));
-        options.put(100, new ChangeScreen(ScreenType.SCREEN_DELETE));
+        options.put(Key.N.getKeyCode(), new Next(this));
+        options.put(Key.P.getKeyCode(), new Previous(this));
+        options.put(Key.E.getKeyCode(), new ChangeScreen(ScreenType.SCREEN_EXIT));
+        options.put(Key.A.getKeyCode(), new ChangeScreen(ScreenType.SCREEN_ADD_RECORD));
+        options.put(Key.C.getKeyCode(), new ChangeScreen(ScreenType.SCREEN_CLEAR_ALL));
+        options.put(Key.D.getKeyCode(), new ChangeScreen(ScreenType.SCREEN_DELETE));
     }
 
     public void incrementCurrentPage(int inc){

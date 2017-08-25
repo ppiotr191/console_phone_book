@@ -7,9 +7,6 @@ import com.phonebook.screens.ScreenType;
 
 import java.io.IOException;
 
-/**
- * Created by asus on 24.08.2017.
- */
 public class ClearAll extends ScreenOption {
 
     public ClearAll(Screen screen) {

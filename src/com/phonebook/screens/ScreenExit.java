@@ -2,12 +2,13 @@ package com.phonebook.screens;
 
 import com.phonebook.options.ChangeScreen;
 import com.phonebook.options.Exit;
+import com.phonebook.utils.Key;
 
 public class ScreenExit extends Screen {
 
     public ScreenExit() {
-        options.put(121, new Exit(this));
-        options.put(110, new ChangeScreen(ScreenType.SCREEN_LIST));
+        options.put(Key.Y.getKeyCode(), new Exit(this));
+        options.put(Key.N.getKeyCode(), new ChangeScreen(ScreenType.SCREEN_LIST));
     }
     @Override
     public void proceed() {

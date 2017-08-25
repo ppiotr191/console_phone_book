@@ -5,6 +5,7 @@ import com.phonebook.PhoneBook;
 import com.phonebook.options.ChangeScreen;
 import com.phonebook.options.Delete;
 import com.phonebook.options.ScreenOption;
+import com.phonebook.utils.Key;
 
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
@@ -17,8 +18,8 @@ public class ScreenDelete extends Screen {
 
     public ScreenDelete() {
         idToDelete = new AtomicInteger(0);
-        options.put(121, new Delete(idToDelete));
-        options.put(110, new ChangeScreen( ScreenType.SCREEN_LIST));
+        options.put(Key.Y.getKeyCode(), new Delete(idToDelete));
+        options.put(Key.N.getKeyCode(), new ChangeScreen( ScreenType.SCREEN_LIST));
     }
     @Override
     public void proceed() {
