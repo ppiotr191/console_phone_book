@@ -29,7 +29,6 @@ public class ScreenDelete extends Screen {
             Scanner input = new Scanner(System.in);
             int inputInt = input.nextInt();
             idToDelete.set(inputInt);
-            Person person = PhoneBook.getInstance().getPersons().stream().filter(p -> p.getId().intValue() == idToDelete.get()).findFirst().get();
             System.out.println("Are you sure to delete? [y/n]");
             readData();
         }
