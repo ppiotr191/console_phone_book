@@ -26,7 +26,7 @@ public class ScreenAddRecord extends Screen {
         for (String label : labels){
             do{
                 System.out.println(String.format("Enter %s:", label));
-                inputData = input.next();
+                inputData = input.nextLine();
                 if(validate(inputData)){
                     values.put(label, inputData);
                 }
