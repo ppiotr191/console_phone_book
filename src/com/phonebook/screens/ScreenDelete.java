@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ScreenDelete extends Screen {
 
-    protected AtomicInteger idToDelete;
+    private AtomicInteger idToDelete;
 
     public ScreenDelete() {
         idToDelete = new AtomicInteger(0);

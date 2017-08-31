@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Delete extends ScreenOption{
 
-    protected AtomicInteger idToDelete;
+    private AtomicInteger idToDelete;
 
     public Delete(AtomicInteger idToDelete) {
         this.idToDelete = idToDelete;

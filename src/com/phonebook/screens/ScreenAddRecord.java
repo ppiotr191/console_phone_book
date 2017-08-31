@@ -13,7 +13,7 @@ public class ScreenAddRecord extends Screen {
 
     private String[] labels = {"Name", "Surname", "Phone", "Address"};
 
-    public boolean validate(String data){
+    private boolean validate(String data){
         return !data.contains(";")&&!"".equals(data);
     }
 

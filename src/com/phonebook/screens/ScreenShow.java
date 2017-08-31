@@ -16,11 +16,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ScreenShow extends Screen {
 
-    protected AtomicInteger idToShow;
-    Person person;
-    ListIterator<Person> iterator;
-    boolean directionRight;
-    boolean isEnterID = true;
+    private AtomicInteger idToShow;
+    private Person person;
+    private ListIterator<Person> iterator;
+    private boolean directionRight;
+    private boolean isEnterID = true;
 
     public boolean isDirectionRight() {
         return directionRight;
@@ -37,7 +37,7 @@ public class ScreenShow extends Screen {
         options.put(Key.E.getKeyCode(), new ChangeScreen( ScreenType.SCREEN_LIST));
     }
 
-    public void showPerson(Person person){
+    private void showPerson(Person person){
         System.out.println("Person:");
         System.out.println("Id:" + person.getId());
         System.out.println("Name:" + person.getName());
@@ -49,9 +49,7 @@ public class ScreenShow extends Screen {
     void showMenu(){
         PhoneBook phoneBook = PhoneBook.getInstance();
         String paginateOption = "";
-        int size = phoneBook.getPersons().size();
 
-        int pages = size;
         if (iterator.hasPrevious()){
             paginateOption += "[P]revious  ";
         }

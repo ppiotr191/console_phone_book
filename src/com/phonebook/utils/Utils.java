@@ -3,9 +3,6 @@ package com.phonebook.utils;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by asus on 23.08.2017.
- */
 public class Utils {
     public static <T> List<T> getPage(List<T> sourceList, int page, int pageSize) {
         if(pageSize <= 0 || page <= 0) {
