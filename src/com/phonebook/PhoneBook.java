@@ -53,9 +53,9 @@ public class PhoneBook {
                 List<String> line = CSVUtils.parseLine(scanner.nextLine());
                 Person person = new Person();
                 person.setName(line.get(0));
-                person.setSurname(line.get(0));
-                person.setPhone(line.get(0));
-                person.setAddress(line.get(0));
+                person.setSurname(line.get(1));
+                person.setPhone(line.get(2));
+                person.setAddress(line.get(3));
                 persons.add(person);
             }
             scanner.close();
