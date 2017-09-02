@@ -19,7 +19,7 @@ public class ScreenAddRecord extends Screen {
 
     @Override
     public void proceed() {
-        Person person = new Person();
+
         Scanner input = new Scanner(System.in);
         String inputData;
         Map<String, String> values = new HashMap<String, String>();
@@ -37,11 +37,10 @@ public class ScreenAddRecord extends Screen {
             }while(!validate(inputData));
 
         }
-        person.setName(values.get("Name"));
-        person.setSurname(values.get("Surname"));
-        person.setPhone(values.get("Phone"));
-        person.setAddress(values.get("Address"));
-
+        Person person = new Person.PersonBuilder(values.get("Name"), values.get("Surname"))
+                .phone(values.get("Phone"))
+                .address(values.get("Address"))
+                .build();
         PhoneBook.getInstance().getPersons().add(person);
         try{
             PhoneBook.getInstance().saveToCsv();

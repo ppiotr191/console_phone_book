@@ -51,11 +51,10 @@ public class PhoneBook {
             Scanner scanner = new Scanner(new File(csvFile));
             while (scanner.hasNext()) {
                 List<String> line = CSVUtils.parseLine(scanner.nextLine());
-                Person person = new Person();
-                person.setName(line.get(0));
-                person.setSurname(line.get(1));
-                person.setPhone(line.get(2));
-                person.setAddress(line.get(3));
+                Person person = new Person.PersonBuilder(line.get(0), line.get(1) )
+                        .phone(line.get(2))
+                        .address(line.get(3))
+                        .build();
                 persons.add(person);
             }
             scanner.close();

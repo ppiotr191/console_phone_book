@@ -9,47 +9,57 @@ public class Person {
     private String phone;
     private String address;
 
-    public Person(){
+    private Person(PersonBuilder personBuilder){
         id = ++counter;
+        name = personBuilder.name;
+        surname = personBuilder.surname;
+        phone = personBuilder.phone;
+        address = personBuilder.address;
     }
 
     public Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getSurname() {
         return surname;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
     public String getPhone() {
         return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String adress) {
-        this.address = adress;
+    public static class PersonBuilder{
+        private String name;
+        private String surname;
+        private String phone;
+        private String address;
+
+        public PersonBuilder(String name, String surname){
+            this.name = name;
+            this.surname = surname;
+        }
+
+        public PersonBuilder phone(String phone){
+            this.phone = phone;
+            return this;
+        }
+
+        public PersonBuilder address(String address){
+            this.address = address;
+            return this;
+        }
+
+        public Person build(){
+            return new Person(this);
+        }
     }
 }
